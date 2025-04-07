@@ -3,8 +3,6 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 
-const userWord = prompt("inserisci una parola");
-
 /**
  * funzione che stabilisce se una parola è palindroma
  * @param {string} palindromeWord parola da verificare
@@ -22,4 +20,11 @@ function isPalindromeWord(palindromeWord){
     return false;
 }
 
-alert("la parola è palindroma: " + isPalindromeWord(userWord));
+const userWord = prompt("inserisci una parola");
+
+if (/^[a-zA-Z]+$/.test(userWord)){ // condizione che controlla se l'imput inserito è composto solo da lettere
+    alert("la parola è palindroma: " + isPalindromeWord(userWord));
+}else{
+    throw new Error("inserire una parola");
+} 
+    
