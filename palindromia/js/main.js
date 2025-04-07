@@ -5,6 +5,11 @@
 
 const userWord = prompt("inserisci una parola");
 
+/**
+ * funzione che stabilisce se una parola è palindroma
+ * @param {string} palindromeWord parola da verificare
+ * @returns {boolean} output della funzione(vero o falso)
+ */
 function isPalindromeWord(palindromeWord){
     let wordInverted = "";
     for(let i = palindromeWord.length - 1; i >= 0; i--){
